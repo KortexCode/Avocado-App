@@ -33,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm type check"
+      "pre-commit": "npm run type check"
     }
   }
 }
