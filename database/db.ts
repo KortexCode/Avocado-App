@@ -3,6 +3,8 @@
 // But let's imagine it is one :)
 import allData from './data'
 
+console.log(allData);
+
 class Database {
   constructor() {}
 
@@ -13,6 +15,7 @@ class Database {
   }
 
   async getById(id: string): Promise<TProduct | null> {
+    //Se verifica si el id pasado por parámetro a getById 
     if (!Object.prototype.hasOwnProperty.call(allData, id)) {
       return null
     }
