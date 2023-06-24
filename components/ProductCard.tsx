@@ -1,11 +1,17 @@
 import React from 'react';
+type Props = {
+  product : TProduct
+}
 
-export default function ProductCard() {
+function ProductCard(props: Props) {
+  const {name, price, image } = props.product;
   return (
     <div>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p>{name}</p>
+      <p>${price}</p>
+      <img src={image} alt="avocado image" />
     </div>
   );
 }
+
+export {ProductCard};
