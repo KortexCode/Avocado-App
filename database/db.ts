@@ -3,8 +3,6 @@
 // But let's imagine it is one :)
 import allData from './data'
 
-console.log(allData);
-
 class Database {
   constructor() {}
 
@@ -15,7 +13,8 @@ class Database {
   }
 
   async getById(id: string): Promise<TProduct | null> {
-    //Se verifica si el id pasado por parámetro a getById 
+    //Se verifica si el id pasado por parámetro a getById coincide con alguna de las propiedades
+    //del objeto allData proveniente del archivo data.ts
     if (!Object.prototype.hasOwnProperty.call(allData, id)) {
       return null
     }
@@ -34,6 +33,7 @@ const randomDelay = () =>
     const delay = Math.floor(Math.random() * (max - min + 1)) + min
 
     setTimeout(resolve, delay)
-  })
+  }
+)
 
 export default Database
