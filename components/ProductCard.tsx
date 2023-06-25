@@ -4,6 +4,7 @@ type Props = {
 }
 
 function ProductCard(props: Props) {
+  
   const {name, price, image } = props.product;
   return (
     <div>
